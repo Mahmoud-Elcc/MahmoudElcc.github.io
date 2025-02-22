@@ -4687,3 +4687,62 @@ input, select, textarea {
 		}
 
 	}
+	/* ✅ Center the entire footer */
+#footer {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    flex-wrap: wrap;         /* Allows wrapping on small screens */
+}
+
+/* ✅ Center contact sections */
+#footer > section.split.contact {
+    display: flex;
+    justify-content: center; /* Align contact sections horizontally */
+    flex-wrap: wrap;
+}
+
+/* ✅ Center items within each contact section */
+#footer > section.split.contact > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Center items vertically */
+    padding: 2rem;
+    width: auto;             /* Remove fixed width */
+}
+
+/* ✅ Remove fixed width from first child */
+#footer > section.split.contact > section > :first-child {
+    width: auto;
+}
+
+/* ✅ Center 'alt' sections */
+#footer > section.split.contact > section.alt {
+    align-items: center;
+}
+section {
+    text-align: center;
+}
+
+section p, section ul {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left; /* Keeps list items and links aligned properly */
+}
+.contact {
+    display: flex;
+    justify-content: space-around; /* Even spacing between sections */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    text-align: center; /* Center titles and content */
+    padding: 20px;
+}
+
+.contact section {
+    flex: 1; /* Equal space for each section */
+    min-width: 150px; /* Ensures sections don't get too narrow */
+}
+
+.contact p, .contact ul {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left; /* Aligns text inside */
+}
